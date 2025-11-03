@@ -1,0 +1,33 @@
+# Redwood Mobility
+# Jekyll configuration for GitHub Pages
+
+# Site settings
+title: Redwood Mobility
+description: "Building premium electric vehicle charging infrastructure across America's scenic corridors."
+url: "https://redwoodmobility.com"
+baseurl: ""
+
+# Organization info
+organization:
+  name: Redwood Mobility, Inc.
+  tagline: "Infrastructure Ownership for the Long Term"
+  main_site: "https://redwoodmobility.com"
+  email: info@redwoodmobility.com
+  investor_email: investors@redwoodmobility.com
+  realestate_email: realestate@redwoodmobility.com
+
+# Build settings
+markdown: kramdown
+theme: null
+plugins:
+  - jekyll-seo-tag
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .gitignore
+  - .DS_Store
+  - vendor/
+  - .bundle/

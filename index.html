@@ -1,593 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redwood Mobility | Electric Infrastructure</title>
-    <meta name="description" content="Building premium electric vehicle charging infrastructure across America's scenic corridors.">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --redwood-copper: #A14E2B;
-            --forest-green: #2E473B;
-            --light-sand: #F3E5C8;
-            --slate-charcoal: #3B3B3B;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
-            line-height: 1.6;
-            color: var(--slate-charcoal);
-            background-color: #ffffff;
-            overflow-x: hidden;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            padding: 1.5rem 4rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(46, 71, 59, 0.1);
-        }
-
-        .logo {
-            width: 220px;
-            height: auto;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 3rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: var(--forest-green);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--redwood-copper);
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 70vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--forest-green) 0%, #1e3029 100%);
-            padding: 8rem 2rem 4rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 20% 50%, rgba(161, 78, 43, 0.15) 0%, transparent 50%);
-        }
-
-        .hero-content {
-            max-width: 1000px;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: 4.5rem;
-            font-weight: 700;
-            color: #ffffff;
-            line-height: 1.1;
-            margin-bottom: 2rem;
-            letter-spacing: -0.02em;
-        }
-
-        .hero .accent {
-            color: var(--redwood-copper);
-            display: block;
-            margin-top: 0.5rem;
-        }
-
-        .hero p {
-            font-size: 1.4rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 3rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-primary {
-            display: inline-block;
-            background-color: var(--redwood-copper);
-            color: white;
-            padding: 1.2rem 3rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 24px rgba(161, 78, 43, 0.3);
-        }
-
-        .cta-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 32px rgba(161, 78, 43, 0.4);
-            background-color: #8a3f20;
-        }
-
-        /* About Section */
-        .about {
-            padding: 8rem 4rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 5rem;
-        }
-
-        .section-label {
-            color: var(--redwood-copper);
-            font-size: 0.9rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-        }
-
-        .section-title {
-            font-size: 3rem;
-            color: var(--forest-green);
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.01em;
-        }
-
-        .section-description {
-            font-size: 1.3rem;
-            color: var(--slate-charcoal);
-            max-width: 700px;
-            margin: 0 auto;
-            line-height: 1.8;
-            opacity: 0.9;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 4rem;
-            margin-top: 4rem;
-        }
-
-        .feature {
-            text-align: center;
-        }
-
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--redwood-copper) 0%, #8a3f20 100%);
-            border-radius: 12px;
-            margin: 0 auto 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            color: white;
-        }
-
-        .feature h3 {
-            font-size: 1.5rem;
-            color: var(--forest-green);
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .feature p {
-            color: var(--slate-charcoal);
-            font-size: 1.05rem;
-            line-height: 1.7;
-            opacity: 0.85;
-        }
-
-        /* Portfolio Section */
-        .portfolio {
-            background-color: var(--light-sand);
-            padding: 8rem 4rem;
-        }
-
-        .portfolio-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .portfolio-card {
-            background: white;
-            border-radius: 16px;
-            padding: 4rem;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-        }
-
-        .brand-tag {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--forest-green) 0%, #1e3029 100%);
-            color: var(--redwood-copper);
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            margin-bottom: 1.5rem;
-        }
-
-        .portfolio-card h2 {
-            font-size: 2.5rem;
-            color: var(--forest-green);
-            margin-bottom: 1rem;
-            font-weight: 700;
-        }
-
-        .tagline {
-            font-size: 1.5rem;
-            font-style: italic;
-            color: var(--redwood-copper);
-            margin-bottom: 2rem;
-        }
-
-        .portfolio-card p {
-            font-size: 1.15rem;
-            line-height: 1.8;
-            color: var(--slate-charcoal);
-            margin-bottom: 1.5rem;
-            opacity: 0.9;
-        }
-
-        .portfolio-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--redwood-copper);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-top: 1rem;
-            transition: gap 0.3s ease;
-        }
-
-        .portfolio-link:hover {
-            gap: 1rem;
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 8rem 4rem;
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .contact-intro {
-            font-size: 1.3rem;
-            color: var(--slate-charcoal);
-            margin-bottom: 3rem;
-            opacity: 0.9;
-        }
-
-        .contact-methods {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-            margin-top: 3rem;
-        }
-
-        .contact-item {
-            text-align: center;
-        }
-
-        .contact-item h3 {
-            font-size: 1.1rem;
-            color: var(--forest-green);
-            margin-bottom: 0.75rem;
-            font-weight: 600;
-        }
-
-        .contact-item a {
-            color: var(--redwood-copper);
-            text-decoration: none;
-            font-size: 1.05rem;
-            font-weight: 500;
-            transition: opacity 0.3s ease;
-        }
-
-        .contact-item a:hover {
-            opacity: 0.7;
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--forest-green);
-            color: rgba(255, 255, 255, 0.8);
-            padding: 3rem 4rem;
-            text-align: center;
-        }
-
-        footer p {
-            font-size: 0.95rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .features {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            nav {
-                padding: 1rem 1.5rem;
-            }
-
-            .logo {
-                width: 160px;
-            }
-
-            .nav-links {
-                gap: 1.2rem;
-            }
-
-            .nav-links a {
-                font-size: 0.85rem;
-            }
-
-            .hero {
-                min-height: 60vh;
-                padding: 7rem 1.5rem 3rem;
-            }
-
-            .hero h1 {
-                font-size: 2.2rem;
-                margin-bottom: 1.5rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-                margin-bottom: 2rem;
-            }
-
-            .cta-primary {
-                padding: 1rem 2rem;
-                font-size: 1rem;
-            }
-
-            .about,
-            .portfolio,
-            .contact {
-                padding: 4rem 1.5rem;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .section-description {
-                font-size: 1.1rem;
-            }
-
-            .portfolio-card {
-                padding: 2rem;
-            }
-
-            .portfolio-card h2 {
-                font-size: 2rem;
-            }
-
-            .tagline {
-                font-size: 1.2rem;
-            }
-
-            .portfolio-card p {
-                font-size: 1rem;
-            }
-
-            .contact-methods {
-                flex-direction: column;
-                gap: 2rem;
-            }
-
-            .feature h3 {
-                font-size: 1.3rem;
-            }
-
-            .feature p {
-                font-size: 1rem;
-            }
-
-            footer {
-                padding: 2rem 1.5rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            nav {
-                padding: 0.75rem 1rem;
-            }
-
-            .logo {
-                width: 140px;
-            }
-
-            .nav-links {
-                gap: 0.8rem;
-            }
-
-            .nav-links a {
-                font-size: 0.75rem;
-            }
-
-            .hero {
-                min-height: 50vh;
-                padding: 6rem 1rem 2.5rem;
-            }
-
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .hero p {
-                font-size: 0.95rem;
-            }
-
-            .section-title {
-                font-size: 1.5rem;
-            }
-
-            .section-description {
-                font-size: 1rem;
-            }
-
-            .about,
-            .portfolio,
-            .contact {
-                padding: 3rem 1rem;
-            }
-
-            .portfolio-card {
-                padding: 1.5rem;
-            }
-
-            .portfolio-card h2 {
-                font-size: 1.6rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Navigation -->
-    <nav>
-        <img src="redwood-logo-trans.png" alt="Redwood Mobility" class="logo">
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
+---
+layout: default
+title: Redwood Mobility | Electric Infrastructure
+description: Building premium electric vehicle charging infrastructure across America's scenic corridors.
+---
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>
+            Building Infrastructure
+            <span class="accent">for America's Electric Future</span>
+        </h1>
+        <p>We develop and own premium EV charging destinations along scenic corridors where traditional networks fall short.</p>
+        <a href="#contact" class="cta-primary">Get in Touch</a>
+    </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+    <div class="section-header">
+        <div class="section-label">Who We Are</div>
+        <h2 class="section-title">Infrastructure Ownership<br>for the Long Term</h2>
+        <p class="section-description">Redwood Mobility develops and owns the real estate and facilities that power electric transportation across America's most challenging corridors.</p>
+    </div>
+
+    <div class="features">
+        <div class="feature">
+            <div class="feature-icon">🏛️</div>
+            <h3>Strategic Assets</h3>
+            <p>We acquire and develop premium locations along scenic routes where traditional charging infrastructure cannot reliably serve travelers.</p>
         </div>
-    </nav>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>
-                Building Infrastructure
-                <span class="accent">for America's Electric Future</span>
-            </h1>
-            <p>We develop and own premium EV charging destinations along scenic corridors where traditional networks fall short.</p>
-            <a href="#contact" class="cta-primary">Get in Touch</a>
+        <div class="feature">
+            <div class="feature-icon">⚡</div>
+            <h3>Operational Excellence</h3>
+            <p>Our properties enable best-in-class charging experiences through purpose-built facilities and integrated infrastructure.</p>
         </div>
-    </section>
 
-    <!-- About -->
-    <section class="about" id="about">
+        <div class="feature">
+            <div class="feature-icon">📈</div>
+            <h3>Enduring Value</h3>
+            <p>We build infrastructure designed to appreciate over decades as electric vehicle adoption accelerates nationwide.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio -->
+<section class="portfolio" id="portfolio">
+    <div class="portfolio-content">
         <div class="section-header">
-            <div class="section-label">Who We Are</div>
-            <h2 class="section-title">Infrastructure Ownership<br>for the Long Term</h2>
-            <p class="section-description">Redwood Mobility develops and owns the real estate and facilities that power electric transportation across America's most challenging corridors.</p>
+            <div class="section-label">Our Portfolio</div>
+            <h2 class="section-title">Powering Premium Experiences</h2>
         </div>
 
-        <div class="features">
-            <div class="feature">
-                <div class="feature-icon">🏛️</div>
-                <h3>Strategic Assets</h3>
-                <p>We acquire and develop premium locations along scenic routes where traditional charging infrastructure cannot reliably serve travelers.</p>
-            </div>
-
-            <div class="feature">
-                <div class="feature-icon">⚡</div>
-                <h3>Operational Excellence</h3>
-                <p>Our properties enable best-in-class charging experiences through purpose-built facilities and integrated infrastructure.</p>
-            </div>
-
-            <div class="feature">
-                <div class="feature-icon">📈</div>
-                <h3>Enduring Value</h3>
-                <p>We build infrastructure designed to appreciate over decades as electric vehicle adoption accelerates nationwide.</p>
-            </div>
+        <div class="portfolio-card">
+            <span class="brand-tag">Operating Brand</span>
+            <h2>Rangeway Energy</h2>
+            <p class="tagline">"Where charging becomes part of your journey"</p>
+            <p>Our flagship operating brand delivers hospitality-grade EV charging experiences across America's scenic highways. Operating from Redwood-owned properties, Rangeway combines climate-controlled amenities with 99% uptime reliability.</p>
+            <p><strong>Focus:</strong> National parks, scenic corridors, and premium tourism destinations across the Western United States.</p>
+            <a href="https://rangeway.energy" class="portfolio-link">Learn More →</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Portfolio -->
-    <section class="portfolio" id="portfolio">
-        <div class="portfolio-content">
-            <div class="section-header">
-                <div class="section-label">Our Portfolio</div>
-                <h2 class="section-title">Powering Premium Experiences</h2>
-            </div>
+<!-- Contact -->
+<section class="contact" id="contact">
+    <div class="section-header">
+        <div class="section-label">Get in Touch</div>
+        <h2 class="section-title">Let's Build the Future</h2>
+        <p class="contact-intro">Interested in strategic partnerships, investment opportunities, or site collaboration? We welcome your inquiry.</p>
+    </div>
 
-            <div class="portfolio-card">
-                <span class="brand-tag">Operating Brand</span>
-                <h2>Rangeway Energy</h2>
-                <p class="tagline">"Where charging becomes part of your journey"</p>
-                <p>Our flagship operating brand delivers hospitality-grade EV charging experiences across America's scenic highways. Operating from Redwood-owned properties, Rangeway combines climate-controlled amenities with 99% uptime reliability.</p>
-                <p><strong>Focus:</strong> National parks, scenic corridors, and premium tourism destinations across the Western United States.</p>
-                <a href="https://rangeway.energy" class="portfolio-link">Learn More →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="contact" id="contact">
-        <div class="section-header">
-            <div class="section-label">Get in Touch</div>
-            <h2 class="section-title">Let's Build the Future</h2>
-            <p class="contact-intro">Interested in strategic partnerships, investment opportunities, or site collaboration? We welcome your inquiry.</p>
+    <div class="contact-methods">
+        <div class="contact-item">
+            <h3>Investor Relations</h3>
+            <a href="mailto:{{ site.organization.investor_email }}">{{ site.organization.investor_email }}</a>
         </div>
 
-        <div class="contact-methods">
-            <div class="contact-item">
-                <h3>Investor Relations</h3>
-                <a href="mailto:investors@redwoodmobility.com">investors@redwoodmobility.com</a>
-            </div>
-
-            <div class="contact-item">
-                <h3>Real Estate</h3>
-                <a href="mailto:realestate@redwoodmobility.com">realestate@redwoodmobility.com</a>
-            </div>
-
-            <div class="contact-item">
-                <h3>General</h3>
-                <a href="mailto:info@redwoodmobility.com">info@redwoodmobility.com</a>
-            </div>
+        <div class="contact-item">
+            <h3>Real Estate</h3>
+            <a href="mailto:{{ site.organization.realestate_email }}">{{ site.organization.realestate_email }}</a>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Redwood Mobility, Inc.</p>
-    </footer>
-</body>
-</html>
+        <div class="contact-item">
+            <h3>General</h3>
+            <a href="mailto:{{ site.organization.email }}">{{ site.organization.email }}</a>
+        </div>
+    </div>
+</section>
