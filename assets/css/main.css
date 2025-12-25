@@ -361,6 +361,22 @@ nav {
     box-shadow: var(--card-shadow-hover);
 }
 
+.portfolio-logo {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.portfolio-logo svg {
+    width: 100%;
+    height: 100%;
+    max-width: 48px;
+    max-height: 48px;
+}
+
 .brand-tag {
     display: inline-block;
     background: linear-gradient(135deg, var(--forest-green) 0%, var(--forest-green-dark) 100%);
