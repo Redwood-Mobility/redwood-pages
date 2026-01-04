@@ -495,23 +495,6 @@ nav.scrolled {
     letter-spacing: 0.1em;
 }
 
-/* Animated electric pulse */
-.electric-line {
-    position: absolute;
-    bottom: -60px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 120px;
-    background: linear-gradient(to bottom, var(--redwood-copper), transparent);
-    animation: pulse-down 2s ease-in-out infinite;
-}
-
-@keyframes pulse-down {
-    0%, 100% { opacity: 0.3; transform: translateX(-50%) scaleY(0.8); }
-    50% { opacity: 1; transform: translateX(-50%) scaleY(1); }
-}
-
 /* ===== Section Styles ===== */
 .section-header {
     text-align: center;
@@ -863,12 +846,9 @@ nav.scrolled {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
     margin-top: 3rem;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .contact-card {
@@ -899,10 +879,9 @@ nav.scrolled {
 .contact-card a {
     color: var(--redwood-copper);
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 600;
     transition: color var(--transition-fast);
-    white-space: nowrap;
 }
 
 .contact-card a:hover {
