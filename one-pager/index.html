@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redwood Mobility | Investor Overview</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --redwood-copper: #A14E2B;
+            --redwood-copper-light: #c76a42;
+            --forest-green: #2E473B;
+            --forest-green-dark: #1e3029;
+            --light-sand: #F3E5C8;
+            --slate-charcoal: #3B3B3B;
+            --bg-primary: #faf9f7;
+            --text-primary: #1a1a1a;
+            --text-secondary: #3B3B3B;
+            --font-display: 'Outfit', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --redwood-copper: #d4734a;
+                --redwood-copper-light: #e8936d;
+                --forest-green: #4a7a64;
+                --bg-primary: #0a0d0b;
+                --text-primary: #f5f5f5;
+                --text-secondary: #c8c8c8;
+            }
+        }
+
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-primary);
+            color: var(--text-secondary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--forest-green);
+        }
+
+        .logo-mark {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1rem;
+        }
+
+        .company-name {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.03em;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.25rem;
+            color: var(--redwood-copper);
+            font-weight: 500;
+        }
+
+        /* Mission */
+        .mission {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--forest-green) 0%, var(--forest-green-dark) 100%);
+            border-radius: 16px;
+            color: white;
+        }
+
+        .mission p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Stats Row */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid rgba(46, 71, 59, 0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .stat-box {
+                background: #151a17;
+                border-color: rgba(255,255,255,0.08);
+            }
+        }
+
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--redwood-copper);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+        }
+
+        /* Section Headers */
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--redwood-copper);
+            display: inline-block;
+        }
+
+        /* Portfolio Grid */
+        .portfolio-section {
+            margin-bottom: 3rem;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .brand-card {
+            background: white;
+            border-radius: 16px;
+            padding: 1.75rem;
+            border: 1px solid rgba(46, 71, 59, 0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .brand-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .brand-card {
+                background: #151a17;
+                border-color: rgba(255,255,255,0.08);
+            }
+        }
+
+        .brand-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .brand-icon {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+        }
+
+        .brand-name {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .brand-type {
+            display: inline-block;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            background: var(--forest-green);
+            color: var(--light-sand);
+            padding: 0.3rem 0.75rem;
+            border-radius: 100px;
+            margin-bottom: 0.75rem;
+        }
+
+        .brand-tagline {
+            font-style: italic;
+            color: var(--redwood-copper);
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .brand-description {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .brand-focus {
+            font-size: 0.85rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid rgba(46, 71, 59, 0.1);
+        }
+
+        .brand-focus strong {
+            color: var(--text-primary);
+        }
+
+        /* Value Props */
+        .value-section {
+            margin-bottom: 3rem;
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .value-item {
+            padding: 1.5rem;
+            background: var(--light-sand);
+            border-radius: 12px;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .value-item {
+                background: #111714;
+            }
+        }
+
+        .value-item h4 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .value-item p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Contact */
+        .contact-section {
+            background: linear-gradient(135deg, var(--forest-green) 0%, var(--forest-green-dark) 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            color: white;
+        }
+
+        .contact-section .section-title {
+            color: white;
+            border-color: var(--redwood-copper-light);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .contact-item h4 {
+            font-family: var(--font-display);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0.7;
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-item a {
+            color: var(--light-sand);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
+            color: var(--redwood-copper-light);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(46, 71, 59, 0.1);
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .footer a {
+            color: var(--redwood-copper);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .portfolio-grid,
+            .value-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .page {
+                padding: 2rem 1rem;
+            }
+
+            .company-name {
+                font-size: 2rem;
+            }
+
+            .stats-row {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+
+            .stat-number {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!-- Header -->
+        <header class="header">
+            <svg class="logo-mark" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                <rect width="60" height="60" rx="12" fill="#2E473B"/>
+                <path d="M15 45 L15 15 C15 12 17 10 20 10 L35 10 C43 10 48 15 48 23 C48 30 43 34 36 35 L48 45" stroke="#F3E5C8" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="36" cy="23" r="4" fill="#A14E2B"/>
+            </svg>
+            <h1 class="company-name">Redwood Mobility</h1>
+            <p class="tagline">Building Infrastructure for America's Electric Future</p>
+        </header>
+
+        <!-- Mission -->
+        <div class="mission">
+            <p>Redwood Mobility develops and owns premium electric vehicle charging infrastructure across America's scenic corridors. Three differentiated brands serve distinct market segments while sharing operational excellence and infrastructure investment.</p>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-row">
+            <div class="stat-box">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Portfolio Brands</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">2026</div>
+                <div class="stat-label">First Locations</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Owner-Operated</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">DC</div>
+                <div class="stat-label">Fast Charging</div>
+            </div>
+        </div>
+
+        <!-- Portfolio -->
+        <section class="portfolio-section">
+            <h2 class="section-title">Portfolio Companies</h2>
+            <div class="portfolio-grid">
+                <!-- Rangeway -->
+                <div class="brand-card">
+                    <div class="brand-header">
+                        <svg class="brand-icon" viewBox="0 0 96 112" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100" stroke="#2E473B" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="58" cy="32" r="10" fill="#f4a855"/>
+                        </svg>
+                        <div class="brand-name">Rangeway</div>
+                    </div>
+                    <span class="brand-type">Flagship Brand</span>
+                    <p class="brand-tagline">"Adventure in your EV, recharge in luxury"</p>
+                    <p class="brand-description">Hospitality-grade EV charging on America's most memorable routes. Climate-controlled lounges, artisan cafes, and architecturally distinctive stations.</p>
+                    <p class="brand-focus"><strong>Focus:</strong> Premium destinations on scenic corridors across the American West.</p>
+                </div>
+
+                <!-- Altara Energy -->
+                <div class="brand-card">
+                    <div class="brand-header">
+                        <svg class="brand-icon" viewBox="0 0 56 60" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 48 L28 8 L48 48" fill="none" stroke="#0891B2" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="4" y="52" width="48" height="6" rx="2" fill="#F97316"/>
+                        </svg>
+                        <div class="brand-name">Altara Energy</div>
+                    </div>
+                    <span class="brand-type">Infrastructure Partner</span>
+                    <p class="brand-tagline">"We bring the chargers, you bring the location"</p>
+                    <p class="brand-description">Full-service EV charging infrastructure partner. Turnkey site development with zero upfront cost for property owners.</p>
+                    <p class="brand-focus"><strong>Focus:</strong> B2B partnerships with property owners, municipalities, and commercial partners.</p>
+                </div>
+
+                <!-- ChargeVia -->
+                <div class="brand-card">
+                    <div class="brand-header">
+                        <svg class="brand-icon" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#FF6B35"/>
+                                    <stop offset="100%" style="stop-color:#E85A24"/>
+                                </linearGradient>
+                                <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#8B6BB4"/>
+                                    <stop offset="100%" style="stop-color:#7B5BA4"/>
+                                </linearGradient>
+                            </defs>
+                            <rect x="4" y="4" width="72" height="72" rx="16" fill="#111111"/>
+                            <path d="M22 22 L40 40 L22 58" stroke="url(#orangeGrad)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                            <path d="M40 22 L58 40 L40 58" stroke="url(#purpleGrad)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        </svg>
+                        <div class="brand-name">ChargeVia</div>
+                    </div>
+                    <span class="brand-type">Consumer Brand</span>
+                    <p class="brand-tagline">"The EV gas station"</p>
+                    <p class="brand-description">The familiar gas station experience, reimagined for EVs. DC fast chargers, convenience store, driver's lounge, and clean restrooms.</p>
+                    <p class="brand-focus"><strong>Focus:</strong> Urban corridors, suburban hubs, and highway-adjacent locations.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Value Propositions -->
+        <section class="value-section">
+            <h2 class="section-title">Investment Thesis</h2>
+            <div class="value-grid">
+                <div class="value-item">
+                    <h4>Strategic Assets</h4>
+                    <p>Premium locations along scenic routes where traditional charging infrastructure cannot reliably serve travelers.</p>
+                </div>
+                <div class="value-item">
+                    <h4>Operational Excellence</h4>
+                    <p>Purpose-built facilities with integrated infrastructure enabling best-in-class charging experiences.</p>
+                </div>
+                <div class="value-item">
+                    <h4>Enduring Value</h4>
+                    <p>Infrastructure designed to appreciate over decades as EV adoption accelerates nationwide.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact-section">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h4>Investor Relations</h4>
+                    <a href="mailto:investors@redwoodmobility.com">investors@redwoodmobility.com</a>
+                </div>
+                <div class="contact-item">
+                    <h4>Real Estate</h4>
+                    <a href="mailto:realestate@redwoodmobility.com">realestate@redwoodmobility.com</a>
+                </div>
+                <div class="contact-item">
+                    <h4>General Inquiries</h4>
+                    <a href="mailto:info@redwoodmobility.com">info@redwoodmobility.com</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Redwood Mobility. All rights reserved. | <a href="https://redwoodmobility.com">redwoodmobility.com</a></p>
+        </footer>
+    </div>
+</body>
+</html>
