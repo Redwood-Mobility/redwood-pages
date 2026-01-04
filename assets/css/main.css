@@ -1,7 +1,7 @@
 /* Redwood Mobility - Kinetic Infrastructure Edition */
 /* A bold, cinematic design for America's electric future */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Syne:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
 
 *, *::before, *::after {
     margin: 0;
@@ -48,7 +48,7 @@
     --noise-opacity: 0.03;
 
     /* Typography */
-    --font-display: 'Syne', sans-serif;
+    --font-display: 'Outfit', sans-serif;
     --font-body: 'Plus Jakarta Sans', sans-serif;
 
     /* Transitions */
@@ -863,16 +863,19 @@ nav.scrolled {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
     margin-top: 3rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-card {
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: 20px;
-    padding: 2rem;
+    padding: 2rem 2.5rem;
     text-align: center;
     transition: all var(--transition-base);
     box-shadow: var(--card-shadow);
@@ -896,10 +899,10 @@ nav.scrolled {
 .contact-card a {
     color: var(--redwood-copper);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
     transition: color var(--transition-fast);
-    word-break: break-all;
+    white-space: nowrap;
 }
 
 .contact-card a:hover {
