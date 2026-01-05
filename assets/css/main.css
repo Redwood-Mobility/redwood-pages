@@ -187,13 +187,13 @@ nav {
     border: 1px solid var(--nav-border);
     border-radius: 100px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-    transition: all var(--transition-base);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 nav.scrolled {
     top: 0;
     left: 0;
-    transform: none;
+    transform: translateX(0);
     width: 100%;
     max-width: 100%;
     border-radius: 0;
