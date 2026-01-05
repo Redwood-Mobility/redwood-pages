@@ -191,9 +191,16 @@ nav {
 }
 
 nav.scrolled {
-    top: 0.75rem;
-    padding: 0.65rem 1rem 0.65rem 1.5rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    padding: 0.75rem 3rem;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-bottom: 1px solid var(--nav-border);
 }
 
 .logo-link {
@@ -1296,6 +1303,14 @@ footer p {
         padding: 0.55rem 0.85rem;
     }
 
+    .nav-links a.nav-cta {
+        padding: 0.55rem 1rem;
+    }
+
+    nav.scrolled {
+        padding: 0.7rem 1.5rem;
+    }
+
     .hero {
         min-height: auto;
         padding: 8rem 1.5rem 4rem;
@@ -1359,6 +1374,15 @@ footer p {
     .nav-links a:not(.nav-cta) {
         padding: 0.45rem 0.6rem;
         font-size: 0.75rem;
+    }
+
+    .nav-links a.nav-cta {
+        padding: 0.45rem 0.85rem;
+        font-size: 0.75rem;
+    }
+
+    nav.scrolled {
+        padding: 0.65rem 1rem;
     }
 
     .hero {
