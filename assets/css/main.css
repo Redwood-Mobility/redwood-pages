@@ -677,6 +677,32 @@ nav.scrolled {
     gap: 2rem;
 }
 
+/* Portfolio Hierarchy Layout */
+.portfolio-hierarchy {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.portfolio-brands {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    position: relative;
+}
+
+/* Connecting line from Altara to brands */
+.portfolio-brands::before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 1rem;
+    background: linear-gradient(180deg, var(--redwood-copper), transparent);
+}
+
 .portfolio-card {
     background: var(--card-bg);
     border-radius: 24px;
@@ -710,6 +736,60 @@ nav.scrolled {
 
 .portfolio-card:hover::before {
     opacity: 0.1;
+}
+
+/* Primary card (Altara - Operating Company) */
+.portfolio-card-primary {
+    background: linear-gradient(135deg, var(--forest-green) 0%, var(--forest-green-dark) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.portfolio-card-primary h2 {
+    color: #ffffff;
+}
+
+.portfolio-card-primary p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.portfolio-card-primary .tagline {
+    color: var(--redwood-copper-light);
+}
+
+.portfolio-card-primary .portfolio-link {
+    color: var(--light-sand);
+}
+
+.portfolio-card-primary .portfolio-link:hover {
+    color: #ffffff;
+}
+
+.portfolio-card-primary::before {
+    background: radial-gradient(circle at top right, rgba(161, 78, 43, 0.3), transparent 60%);
+}
+
+/* Primary brand tag styling */
+.brand-tag-primary {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--light-sand);
+}
+
+/* Secondary brand tag styling (muted, smaller) */
+.brand-tag-secondary {
+    background: transparent;
+    border: 1px solid var(--card-border);
+    color: var(--text-muted);
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+}
+
+.brand-tag-secondary::before {
+    background: var(--forest-green);
+}
+
+/* Secondary cards (ChargeVia & Rangeway) */
+.portfolio-card-secondary {
+    background: var(--card-bg);
 }
 
 .portfolio-logo {
@@ -973,9 +1053,14 @@ footer p {
 
     .features-grid,
     .portfolio-grid,
+    .portfolio-brands,
     .contact-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+
+    .portfolio-brands::before {
+        display: none;
     }
 
     .feature-card,
