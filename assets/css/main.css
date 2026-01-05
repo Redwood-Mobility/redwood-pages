@@ -202,8 +202,19 @@ nav.scrolled {
 
 .nav-links {
     display: flex;
-    gap: 0.5rem;
+    gap: 0.25rem;
     align-items: center;
+    background: rgba(46, 71, 59, 0.08);
+    padding: 0.35rem;
+    border-radius: 100px;
+    border: 1px solid var(--nav-border);
+}
+
+@media (prefers-color-scheme: dark) {
+    .nav-links {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.1);
+    }
 }
 
 .nav-links a {
@@ -213,7 +224,7 @@ nav.scrolled {
     font-weight: 500;
     font-size: 0.85rem;
     letter-spacing: 0.02em;
-    padding: 0.6rem 1.25rem;
+    padding: 0.5rem 1.1rem;
     border-radius: 100px;
     position: relative;
     transition: all var(--transition-fast);
@@ -221,7 +232,7 @@ nav.scrolled {
 }
 
 .nav-links a:hover {
-    background: rgba(161, 78, 43, 0.1);
+    background: rgba(161, 78, 43, 0.15);
     color: var(--redwood-copper);
 }
 
