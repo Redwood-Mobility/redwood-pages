@@ -57,6 +57,19 @@ Hospitality-grade charging on America's most memorable routes. Climate-controlle
 
 ---
 
+## Rewards Network
+
+### Pathfinder Rewards
+**Open Rewards Platform** | *"Earn rewards everywhere you charge."*
+
+Our loyalty program for EV drivers. Earn credits at participating charging locations nationwide—ChargeVia, Rangeway, and partner networks. Open to all drivers and any charging operator who wants to join.
+
+- **For Drivers:** Free membership, earn credits on every charge
+- **For Partners:** Open to any CPO, hotel, retail, or restaurant
+- **Website:** [pathfinderrewards.com](https://pathfinderrewards.com)
+
+---
+
 ## Brand Comparison
 
 | Attribute | ChargeVia | Rangeway |

@@ -330,6 +330,84 @@
             color: var(--redwood-copper-light);
         }
 
+        /* Pathfinder Section */
+        .pathfinder-section {
+            margin-bottom: 3rem;
+        }
+
+        .pathfinder-card {
+            background: linear-gradient(135deg, #f9f3e8 0%, #f4edd8 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 2px solid #f4a855;
+            text-align: center;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .pathfinder-card {
+                background: linear-gradient(135deg, #1a1814 0%, #1f1c16 100%);
+            }
+        }
+
+        .pathfinder-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .pathfinder-icon {
+            width: 40px;
+            height: 40px;
+            color: var(--text-primary);
+        }
+
+        .pathfinder-name {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .pathfinder-type {
+            display: inline-block;
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            background: linear-gradient(135deg, #f4a855 0%, #e89b3a 100%);
+            color: #1a1a1a;
+            padding: 0.3rem 0.75rem;
+            border-radius: 100px;
+            margin-bottom: 0.75rem;
+        }
+
+        .pathfinder-tagline {
+            font-style: italic;
+            color: var(--redwood-copper);
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .pathfinder-description {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .pathfinder-website a {
+            color: var(--redwood-copper);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .pathfinder-website a:hover {
+            color: var(--redwood-copper-light);
+        }
+
         /* Value Props */
         .value-section {
             margin-bottom: 3rem;
@@ -548,6 +626,26 @@
                     <p class="brand-focus"><strong>Focus:</strong> Premium destinations on scenic corridors.</p>
                     <p class="brand-website"><a href="https://rangewayev.com">rangewayev.com</a></p>
                 </div>
+            </div>
+        </section>
+
+        <!-- Pathfinder Rewards -->
+        <section class="pathfinder-section">
+            <h2 class="section-title">Rewards Network</h2>
+            <div class="pathfinder-card">
+                <div class="pathfinder-header">
+                    <svg class="pathfinder-icon" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8" y="8" width="44" height="44" rx="10" ry="10" stroke="currentColor" stroke-width="4" fill="none"/>
+                        <path d="M30 14 L30 23 M30 37 L30 46 M14 30 L23 30 M37 30 L46 30" stroke="currentColor" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M18 18 L22 22 M38 38 L42 42 M42 18 L38 22 M22 38 L18 42" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+                        <circle cx="30" cy="30" r="7" fill="#f4a855"/>
+                    </svg>
+                    <div class="pathfinder-name">Pathfinder Rewards</div>
+                </div>
+                <span class="pathfinder-type">Open Rewards Platform</span>
+                <p class="pathfinder-tagline">"Earn rewards everywhere you charge."</p>
+                <p class="pathfinder-description">Our loyalty program for EV drivers. Earn credits at participating charging locations nationwide—ChargeVia, Rangeway, and partner networks. Open to all drivers and any charging operator who wants to join.</p>
+                <p class="pathfinder-website"><a href="https://pathfinderrewards.com">pathfinderrewards.com</a></p>
             </div>
         </section>
 
