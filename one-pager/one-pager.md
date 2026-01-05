@@ -53,7 +53,7 @@ Hospitality-grade charging on America's most memorable routes. Climate-controlle
 - **Focus:** Premium destinations on scenic corridors
 - **Target:** Scenic route travelers seeking high-end hospitality experiences
 - **Experience:** Destination charging (20-30 min) with premium amenities
-- **Website:** [rangeway.energy](https://rangeway.energy)
+- **Website:** [rangewayev.com](https://rangewayev.com)
 
 ---
 
