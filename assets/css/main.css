@@ -974,6 +974,119 @@ nav.scrolled {
     transform: translateX(6px);
 }
 
+/* ===== Pathfinder Section ===== */
+.pathfinder {
+    padding: var(--section-padding) 3rem;
+    background: var(--bg-tertiary);
+    position: relative;
+}
+
+.pathfinder-container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+}
+
+.pathfinder-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pathfinder-card {
+    background: var(--card-bg);
+    border-radius: 24px;
+    padding: 3rem;
+    border: 1px solid var(--card-border);
+    box-shadow: var(--card-shadow);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.pathfinder-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #f4a855, var(--redwood-copper), #f4a855);
+}
+
+.pathfinder-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+}
+
+.pathfinder-logo svg {
+    width: 56px;
+    height: 56px;
+}
+
+.brand-tag-platform {
+    background: linear-gradient(135deg, #f4a855 0%, #e89b3a 100%);
+    color: #1a1a1a;
+}
+
+.pathfinder-tagline {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--redwood-copper);
+    margin-bottom: 1rem;
+}
+
+.pathfinder-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.pathfinder-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.pathfinder-feature {
+    padding: 1rem 1.25rem;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+}
+
+.feature-label {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--redwood-copper);
+    margin-bottom: 0.35rem;
+}
+
+.feature-text {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.pathfinder-card .portfolio-link {
+    display: inline-flex;
+}
+
+@media (max-width: 768px) {
+    .pathfinder-features {
+        grid-template-columns: 1fr;
+    }
+
+    .pathfinder-card {
+        padding: 2rem;
+    }
+}
+
 /* ===== Contact Section ===== */
 .contact {
     padding: var(--section-padding) 3rem;
