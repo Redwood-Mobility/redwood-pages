@@ -146,12 +146,66 @@
             margin-bottom: 0.4rem;
         }
 
-        /* Portfolio Grid */
-        .portfolio-section {
+        /* Platform Section */
+        .platform-section {
             margin-bottom: 0.5rem;
         }
 
-        .portfolio-grid {
+        /* Operating Company Card */
+        .operating-card {
+            background: var(--forest-green);
+            color: white;
+            padding: 0.5rem;
+            border-radius: 8px;
+            margin-bottom: 0.4rem;
+        }
+
+        .operating-header {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .operating-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        .operating-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 12pt;
+            font-weight: 700;
+            color: white;
+        }
+
+        .operating-type {
+            display: inline-block;
+            font-size: 5.5pt;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--light-sand);
+            padding: 0.1rem 0.35rem;
+            border-radius: 100px;
+            margin-bottom: 0.15rem;
+        }
+
+        .operating-tagline {
+            font-style: italic;
+            color: var(--light-sand);
+            font-size: 8pt;
+            margin-bottom: 0.2rem;
+        }
+
+        .operating-description {
+            font-size: 7.5pt;
+            line-height: 1.45;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Consumer Brands Grid */
+        .brands-grid {
             display: flex;
             gap: 0.5rem;
         }
@@ -185,11 +239,12 @@
 
         .brand-type {
             display: inline-block;
-            font-size: 5.5pt;
+            font-size: 5pt;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            background: var(--forest-green);
-            color: white;
+            letter-spacing: 0.03em;
+            background: transparent;
+            border: 1px solid #ccc;
+            color: var(--text-secondary);
             padding: 0.1rem 0.35rem;
             border-radius: 100px;
             margin-bottom: 0.2rem;
@@ -352,14 +407,14 @@
 
         <!-- Mission Bar -->
         <div class="mission-bar">
-            Redwood Mobility develops and owns premium EV charging infrastructure across America's scenic corridors. Three differentiated brands serve distinct market segments while sharing operational excellence and long-term infrastructure ownership.
+            Redwood Mobility is a holding company that develops and owns EV charging infrastructure across the United States. Our operating company, Altara Energy, builds and runs every site. Drivers experience our two consumer brands: ChargeVia and Rangeway.
         </div>
 
         <!-- Stats Row -->
         <div class="stats-row">
             <div class="stat-box">
-                <div class="stat-number">3</div>
-                <div class="stat-label">Portfolio Brands</div>
+                <div class="stat-number">2</div>
+                <div class="stat-label">Consumer Brands</div>
             </div>
             <div class="stat-box">
                 <div class="stat-number">2026</div>
@@ -375,40 +430,26 @@
             </div>
         </div>
 
-        <!-- Portfolio -->
-        <section class="portfolio-section">
-            <h2 class="section-title">Portfolio Companies</h2>
-            <div class="portfolio-grid">
-                <!-- Rangeway -->
-                <div class="brand-card">
-                    <div class="brand-header">
-                        <svg class="brand-icon" viewBox="0 0 96 112" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100" stroke="#2E473B" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                            <circle cx="58" cy="32" r="10" fill="#f4a855"/>
-                        </svg>
-                        <div class="brand-name">Rangeway</div>
-                    </div>
-                    <span class="brand-type">Flagship Brand</span>
-                    <p class="brand-tagline">"Adventure in your EV, recharge in luxury"</p>
-                    <p class="brand-description">Hospitality-grade EV charging on America's most memorable routes. Climate-controlled lounges, artisan cafes, and architecturally distinctive stations.</p>
-                    <p class="brand-focus"><strong>Focus:</strong> Premium scenic corridor destinations across the American West.</p>
-                </div>
+        <!-- Platform -->
+        <section class="platform-section">
+            <h2 class="section-title">Our Platform</h2>
 
-                <!-- Altara Energy -->
-                <div class="brand-card">
-                    <div class="brand-header">
-                        <svg class="brand-icon" viewBox="0 0 56 60" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8 48 L28 8 L48 48" fill="none" stroke="#0891B2" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-                            <rect x="4" y="52" width="48" height="6" rx="2" fill="#F97316"/>
-                        </svg>
-                        <div class="brand-name">Altara Energy</div>
-                    </div>
-                    <span class="brand-type">Infrastructure Partner</span>
-                    <p class="brand-tagline">"We bring the chargers, you bring the location"</p>
-                    <p class="brand-description">Full-service EV charging infrastructure partner. Turnkey site development with zero upfront cost for property owners.</p>
-                    <p class="brand-focus"><strong>Focus:</strong> B2B partnerships with property owners, municipalities, and commercial partners.</p>
+            <!-- Altara Energy - Operating Company -->
+            <div class="operating-card">
+                <div class="operating-header">
+                    <svg class="operating-icon" viewBox="0 0 56 60" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 48 L28 8 L48 48" fill="none" stroke="#0891B2" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <rect x="4" y="52" width="48" height="6" rx="2" fill="#F97316"/>
+                    </svg>
+                    <div class="operating-name">Altara Energy</div>
                 </div>
+                <span class="operating-type">Operating Company</span>
+                <p class="operating-tagline">"We bring the chargers."</p>
+                <p class="operating-description">Altara Energy is our charging infrastructure operating company. Altara develops, owns, and operates all Redwood Mobility charging sites. We partner with technology platforms, site hosts, and infrastructure investors to deploy reliable fast charging where drivers need it most. Altara operates two consumer brands: ChargeVia and Rangeway.</p>
+            </div>
 
+            <!-- Consumer Brands -->
+            <div class="brands-grid">
                 <!-- ChargeVia -->
                 <div class="brand-card">
                     <div class="brand-header">
@@ -429,10 +470,25 @@
                         </svg>
                         <div class="brand-name">ChargeVia</div>
                     </div>
-                    <span class="brand-type">Consumer Brand</span>
-                    <p class="brand-tagline">"The EV gas station"</p>
-                    <p class="brand-description">Familiar gas station experience reimagined for EVs. DC fast chargers, convenience store, driver's lounge, clean restrooms.</p>
+                    <span class="brand-type">Operated by Altara Energy</span>
+                    <p class="brand-tagline">"The EV gas station."</p>
+                    <p class="brand-description">The familiar gas station format, electrified. DC fast chargers, convenience store, clean restrooms, and covered bays. Pull in, plug in, grab what you need, get back on the road.</p>
                     <p class="brand-focus"><strong>Focus:</strong> Urban corridors, suburban hubs, and highway-adjacent locations.</p>
+                </div>
+
+                <!-- Rangeway -->
+                <div class="brand-card">
+                    <div class="brand-header">
+                        <svg class="brand-icon" viewBox="0 0 96 112" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100" stroke="#2E473B" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="58" cy="32" r="10" fill="#f4a855"/>
+                        </svg>
+                        <div class="brand-name">Rangeway</div>
+                    </div>
+                    <span class="brand-type">Operated by Altara Energy</span>
+                    <p class="brand-tagline">"Adventure in your EV, recharge in luxury."</p>
+                    <p class="brand-description">Hospitality-grade charging on America's most memorable routes. Climate-controlled lounges, premium amenities, and architecturally distinctive stations.</p>
+                    <p class="brand-focus"><strong>Focus:</strong> Premium destinations on scenic corridors.</p>
                 </div>
             </div>
         </section>
@@ -443,11 +499,11 @@
             <div class="value-grid">
                 <div class="value-item">
                     <h4>Strategic Assets</h4>
-                    <p>Premium locations along scenic routes where traditional charging infrastructure cannot reliably serve travelers.</p>
+                    <p>We acquire and develop locations along high-traffic corridors and scenic routes where reliable charging infrastructure is needed most.</p>
                 </div>
                 <div class="value-item">
                     <h4>Operational Excellence</h4>
-                    <p>Purpose-built facilities with integrated infrastructure enabling best-in-class charging experiences.</p>
+                    <p>Every site is owned and operated by Altara Energy, our charging infrastructure company. One operator, consistent standards, reliable service.</p>
                 </div>
                 <div class="value-item">
                     <h4>Enduring Value</h4>
@@ -462,39 +518,33 @@
             <table class="comparison-table">
                 <tr>
                     <th>Attribute</th>
-                    <th>Rangeway</th>
-                    <th>Altara Energy</th>
                     <th>ChargeVia</th>
+                    <th>Rangeway</th>
                 </tr>
                 <tr>
                     <td>Positioning</td>
+                    <td>Convenience / Familiar</td>
                     <td>Premium / Hospitality</td>
-                    <td>City Convenience</td>
-                    <td>Familiar Gas Station</td>
                 </tr>
                 <tr>
                     <td>Target Market</td>
-                    <td>Scenic route travelers</td>
-                    <td>Property owners, fleets, municipalities</td>
                     <td>Daily drivers, road-trippers</td>
+                    <td>Scenic route travelers</td>
                 </tr>
                 <tr>
                     <td>Experience</td>
-                    <td>Destination (20-30 min)</td>
-                    <td>Urban/suburban convenience</td>
                     <td>Quick pit stop</td>
+                    <td>Destination (20-30 min)</td>
                 </tr>
                 <tr>
                     <td>Amenities</td>
-                    <td>Artisan cafe, lounge, WiFi</td>
-                    <td>Site-specific, flexible</td>
-                    <td>Convenience store, lounge, restrooms</td>
+                    <td>Convenience store, restrooms, covered bays</td>
+                    <td>Climate-controlled lounge, premium amenities</td>
                 </tr>
                 <tr>
                     <td>Geography</td>
-                    <td>Western scenic routes</td>
-                    <td>City locations nationwide</td>
                     <td>Urban/suburban/highway adjacent</td>
+                    <td>Scenic corridors</td>
                 </tr>
             </table>
         </section>

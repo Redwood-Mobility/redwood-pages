@@ -6,74 +6,76 @@
 
 ## Overview
 
-Redwood Mobility develops and owns premium electric vehicle charging infrastructure across America's scenic corridors. Three differentiated brands serve distinct market segments while sharing operational excellence and long-term infrastructure ownership.
+Redwood Mobility is a holding company that develops and owns EV charging infrastructure across the United States. Our operating company, Altara Energy, builds and runs every site. Drivers experience our two consumer brands: ChargeVia for convenience-focused locations and Rangeway for premium hospitality destinations.
 
 | Key Metrics | |
 |-------------|---|
-| Portfolio Brands | 3 |
+| Consumer Brands | 2 |
 | First Locations | 2026 |
 | Ownership Model | 100% Owner-Operated |
 | Charging Type | DC Fast Charging |
 
 ---
 
-## Portfolio Companies
-
-### Rangeway
-**Flagship Brand** | *"Adventure in your EV, recharge in luxury"*
-
-Hospitality-grade EV charging on America's most memorable routes. Climate-controlled lounges, artisan cafes, and architecturally distinctive stations.
-
-- **Focus:** Premium destinations on scenic corridors across the American West
-- **Target:** Scenic route travelers seeking high-end hospitality experiences
-- **Amenities:** Climate-controlled indoor lounges, artisan cafes, high-speed WiFi
-- **Website:** [rangewayev.com](https://rangewayev.com)
-
----
+## Our Platform
 
 ### Altara Energy
-**Infrastructure Partner** | *"We bring the chargers, you bring the location"*
+**Operating Company** | *"We bring the chargers."*
 
-Full-service EV charging infrastructure partner. Turnkey site development with zero upfront cost for property owners.
+Altara Energy is our charging infrastructure operating company. Altara develops, owns, and operates all Redwood Mobility charging sites. We partner with technology platforms, site hosts, and infrastructure investors to deploy reliable fast charging where drivers need it most.
 
-- **Focus:** B2B partnerships with property owners, municipalities, and commercial partners
-- **Model:** Build, Own, Operate - Altara invests in and owns all charging infrastructure
-- **Benefits:** Zero capital required, predictable monthly income, increased foot traffic
+- **Role:** Develops, owns, and operates all charging infrastructure
+- **Partners:** Technology platforms, site hosts, infrastructure investors
+- **Operates:** ChargeVia and Rangeway consumer brands
 - **Website:** [altaraenergy.com](https://altaraenergy.com)
 
 ---
 
-### ChargeVia
-**Consumer Brand** | *"The EV gas station"*
+## Consumer Brands
 
-The familiar gas station experience, reimagined for electric vehicles. DC fast chargers, convenience store, driver's lounge, and clean restrooms.
+### ChargeVia
+**Operated by Altara Energy** | *"The EV gas station."*
+
+The familiar gas station format, electrified. DC fast chargers, convenience store, clean restrooms, and covered bays. Pull in, plug in, grab what you need, get back on the road.
 
 - **Focus:** Urban corridors, suburban hubs, and highway-adjacent locations
 - **Target:** Daily EV drivers, fleet operators, road-trippers
-- **Amenities:** Coz-E Corner convenience store, driver's lounge, clean restrooms
+- **Experience:** Quick pit stop with real amenities
 - **Website:** [chargevia.net](https://chargevia.net)
+
+---
+
+### Rangeway
+**Operated by Altara Energy** | *"Adventure in your EV, recharge in luxury."*
+
+Hospitality-grade charging on America's most memorable routes. Climate-controlled lounges, premium amenities, and architecturally distinctive stations designed to complement their surroundings.
+
+- **Focus:** Premium destinations on scenic corridors
+- **Target:** Scenic route travelers seeking high-end hospitality experiences
+- **Experience:** Destination charging (20-30 min) with premium amenities
+- **Website:** [rangeway.energy](https://rangeway.energy)
 
 ---
 
 ## Brand Comparison
 
-| Attribute | Rangeway | Altara Energy | ChargeVia |
-|-----------|----------|---------------|-----------|
-| **Positioning** | Premium / Hospitality | City Convenience | Familiar Gas Station |
-| **Target Market** | Scenic route travelers | Property owners, fleets, municipalities | Daily drivers, road-trippers |
-| **Experience** | Destination (20-30 min) | Urban/suburban convenience | Quick pit stop |
-| **Amenities** | Artisan cafe, lounge, WiFi | Site-specific, flexible | Convenience store, lounge, restrooms |
-| **Geography** | Western scenic routes | City locations nationwide | Urban/suburban/highway adjacent |
+| Attribute | ChargeVia | Rangeway |
+|-----------|-----------|----------|
+| **Positioning** | Convenience / Familiar | Premium / Hospitality |
+| **Target Market** | Daily drivers, road-trippers | Scenic route travelers |
+| **Experience** | Quick pit stop | Destination (20-30 min) |
+| **Amenities** | Convenience store, restrooms, covered bays | Climate-controlled lounge, premium amenities |
+| **Geography** | Urban/suburban/highway adjacent | Scenic corridors |
 
 ---
 
 ## Investment Thesis
 
 ### Strategic Assets
-Premium locations along scenic routes where traditional charging infrastructure cannot reliably serve travelers.
+We acquire and develop locations along high-traffic corridors and scenic routes where reliable charging infrastructure is needed most.
 
 ### Operational Excellence
-Purpose-built facilities with integrated infrastructure enabling best-in-class charging experiences.
+Every site is owned and operated by Altara Energy, our charging infrastructure company. One operator, consistent standards, reliable service.
 
 ### Enduring Value
 Infrastructure designed to appreciate over decades as EV adoption accelerates nationwide.
@@ -92,4 +94,4 @@ Infrastructure designed to appreciate over decades as EV adoption accelerates na
 
 ---
 
-*Three brands. One mission. Building tomorrow's infrastructure today.*
+*One platform. Two experiences. Building tomorrow's charging infrastructure today.*
