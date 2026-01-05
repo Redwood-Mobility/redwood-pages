@@ -1,0 +1,13 @@
+<svg width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Redwood Mobility - Broken Orbit Logo Mark -->
+  <!-- Full Color Version -->
+  <circle cx="50" cy="50" r="42" fill="none" stroke="#A14E2B" stroke-width="3" 
+          stroke-dasharray="50 20" transform="rotate(-45 50 50)"/>
+  <circle cx="50" cy="50" r="32" fill="none" stroke="#A14E2B" stroke-width="3"
+          stroke-dasharray="40 15" transform="rotate(30 50 50)"/>
+  <circle cx="50" cy="50" r="22" fill="none" stroke="#A14E2B" stroke-width="3"
+          stroke-dasharray="30 12" transform="rotate(-20 50 50)"/>
+  <circle cx="50" cy="50" r="12" fill="none" stroke="#A14E2B" stroke-width="3"
+          stroke-dasharray="20 10" transform="rotate(60 50 50)"/>
+  <circle cx="50" cy="50" r="5" fill="#2E473B"/>
+</svg>
