@@ -24,6 +24,7 @@
             --bg-primary: #faf9f7;
             --text-primary: #1a1a1a;
             --text-secondary: #3B3B3B;
+            --text-muted: #6b6b6b;
             --font-display: 'Outfit', sans-serif;
             --font-body: 'Plus Jakarta Sans', sans-serif;
         }
@@ -36,6 +37,7 @@
                 --bg-primary: #0a0d0b;
                 --text-primary: #f5f5f5;
                 --text-secondary: #c8c8c8;
+                --text-muted: #888888;
             }
         }
 
@@ -92,7 +94,7 @@
             max-width: 800px;
             margin: 0 auto 3rem;
             padding: 2rem;
-            background: linear-gradient(135deg, var(--forest-green) 0%, var(--forest-green-dark) 100%);
+            background: linear-gradient(135deg, #2E473B 0%, #1e3029 100%);
             border-radius: 16px;
             color: white;
         }
@@ -153,14 +155,80 @@
             display: inline-block;
         }
 
-        /* Portfolio Grid */
-        .portfolio-section {
+        /* Platform Section */
+        .platform-section {
             margin-bottom: 3rem;
         }
 
-        .portfolio-grid {
+        /* Operating Company Card */
+        .operating-card {
+            background: linear-gradient(135deg, #2E473B 0%, #1e3029 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+
+        .operating-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .operating-icon {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+        }
+
+        .operating-name {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .operating-type {
+            display: inline-block;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            background: rgba(255, 255, 255, 0.15);
+            color: var(--light-sand);
+            padding: 0.3rem 0.75rem;
+            border-radius: 100px;
+            margin-bottom: 0.75rem;
+        }
+
+        .operating-tagline {
+            font-style: italic;
+            color: #c76a42;
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .operating-description {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1rem;
+        }
+
+        .operating-website a {
+            color: var(--light-sand);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .operating-website a:hover {
+            color: white;
+        }
+
+        /* Consumer Brands Grid */
+        .brands-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
         }
 
@@ -207,14 +275,21 @@
 
         .brand-type {
             display: inline-block;
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
-            background: var(--forest-green);
-            color: var(--light-sand);
+            letter-spacing: 0.08em;
+            background: transparent;
+            border: 1px solid rgba(46, 71, 59, 0.2);
+            color: var(--text-muted);
             padding: 0.3rem 0.75rem;
             border-radius: 100px;
             margin-bottom: 0.75rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .brand-type {
+                border-color: rgba(255, 255, 255, 0.15);
+            }
         }
 
         .brand-tagline {
@@ -238,6 +313,21 @@
 
         .brand-focus strong {
             color: var(--text-primary);
+        }
+
+        .brand-website {
+            margin-top: 0.75rem;
+        }
+
+        .brand-website a {
+            color: var(--redwood-copper);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .brand-website a:hover {
+            color: var(--redwood-copper-light);
         }
 
         /* Value Props */
@@ -277,7 +367,7 @@
 
         /* Contact */
         .contact-section {
-            background: linear-gradient(135deg, var(--forest-green) 0%, var(--forest-green-dark) 100%);
+            background: linear-gradient(135deg, #2E473B 0%, #1e3029 100%);
             border-radius: 16px;
             padding: 2rem;
             color: white;
@@ -330,7 +420,7 @@
 
         /* Responsive */
         @media (max-width: 900px) {
-            .portfolio-grid,
+            .brands-grid,
             .value-grid,
             .contact-grid {
                 grid-template-columns: 1fr;
@@ -376,14 +466,14 @@
 
         <!-- Mission -->
         <div class="mission">
-            <p>Redwood Mobility develops and owns premium electric vehicle charging infrastructure across America's scenic corridors. Three differentiated brands serve distinct market segments while sharing operational excellence and infrastructure investment.</p>
+            <p>Redwood Mobility is a holding company that develops and owns EV charging infrastructure across the United States. Our operating company, Altara Energy, builds and runs every site. Drivers experience our two consumer brands: ChargeVia and Rangeway.</p>
         </div>
 
         <!-- Stats -->
         <div class="stats-row">
             <div class="stat-box">
-                <div class="stat-number">3</div>
-                <div class="stat-label">Portfolio Brands</div>
+                <div class="stat-number">2</div>
+                <div class="stat-label">Consumer Brands</div>
             </div>
             <div class="stat-box">
                 <div class="stat-number">2026</div>
@@ -399,40 +489,27 @@
             </div>
         </div>
 
-        <!-- Portfolio -->
-        <section class="portfolio-section">
-            <h2 class="section-title">Portfolio Companies</h2>
-            <div class="portfolio-grid">
-                <!-- Rangeway -->
-                <div class="brand-card">
-                    <div class="brand-header">
-                        <svg class="brand-icon" viewBox="0 0 96 112" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100" stroke="#2E473B" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                            <circle cx="58" cy="32" r="10" fill="#f4a855"/>
-                        </svg>
-                        <div class="brand-name">Rangeway</div>
-                    </div>
-                    <span class="brand-type">Flagship Brand</span>
-                    <p class="brand-tagline">"Adventure in your EV, recharge in luxury"</p>
-                    <p class="brand-description">Hospitality-grade EV charging on America's most memorable routes. Climate-controlled lounges, artisan cafes, and architecturally distinctive stations.</p>
-                    <p class="brand-focus"><strong>Focus:</strong> Premium destinations on scenic corridors across the American West.</p>
-                </div>
+        <!-- Platform -->
+        <section class="platform-section">
+            <h2 class="section-title">Our Platform</h2>
 
-                <!-- Altara Energy -->
-                <div class="brand-card">
-                    <div class="brand-header">
-                        <svg class="brand-icon" viewBox="0 0 56 60" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8 48 L28 8 L48 48" fill="none" stroke="#0891B2" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-                            <rect x="4" y="52" width="48" height="6" rx="2" fill="#F97316"/>
-                        </svg>
-                        <div class="brand-name">Altara Energy</div>
-                    </div>
-                    <span class="brand-type">Infrastructure Partner</span>
-                    <p class="brand-tagline">"We bring the chargers, you bring the location"</p>
-                    <p class="brand-description">Full-service EV charging infrastructure partner. Turnkey site development with zero upfront cost for property owners.</p>
-                    <p class="brand-focus"><strong>Focus:</strong> B2B partnerships with property owners, municipalities, and commercial partners.</p>
+            <!-- Altara Energy - Operating Company -->
+            <div class="operating-card">
+                <div class="operating-header">
+                    <svg class="operating-icon" viewBox="0 0 56 60" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 48 L28 8 L48 48" fill="none" stroke="#0891B2" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <rect x="4" y="52" width="48" height="6" rx="2" fill="#F97316"/>
+                    </svg>
+                    <div class="operating-name">Altara Energy</div>
                 </div>
+                <span class="operating-type">Operating Company</span>
+                <p class="operating-tagline">"We bring the chargers."</p>
+                <p class="operating-description">Altara Energy is our charging infrastructure operating company. Altara develops, owns, and operates all Redwood Mobility charging sites. We partner with technology platforms, site hosts, and infrastructure investors to deploy reliable fast charging where drivers need it most. Altara operates two consumer brands: ChargeVia and Rangeway.</p>
+                <p class="operating-website"><a href="https://altaraenergy.com">altaraenergy.com</a></p>
+            </div>
 
+            <!-- Consumer Brands -->
+            <div class="brands-grid">
                 <!-- ChargeVia -->
                 <div class="brand-card">
                     <div class="brand-header">
@@ -453,10 +530,27 @@
                         </svg>
                         <div class="brand-name">ChargeVia</div>
                     </div>
-                    <span class="brand-type">Consumer Brand</span>
-                    <p class="brand-tagline">"The EV gas station"</p>
-                    <p class="brand-description">The familiar gas station experience, reimagined for EVs. DC fast chargers, convenience store, driver's lounge, and clean restrooms.</p>
+                    <span class="brand-type">Operated by Altara Energy</span>
+                    <p class="brand-tagline">"The EV gas station."</p>
+                    <p class="brand-description">The familiar gas station format, electrified. DC fast chargers, convenience store, clean restrooms, and covered bays. Pull in, plug in, grab what you need, get back on the road.</p>
                     <p class="brand-focus"><strong>Focus:</strong> Urban corridors, suburban hubs, and highway-adjacent locations.</p>
+                    <p class="brand-website"><a href="https://chargevia.net">chargevia.net</a></p>
+                </div>
+
+                <!-- Rangeway -->
+                <div class="brand-card">
+                    <div class="brand-header">
+                        <svg class="brand-icon" viewBox="0 0 96 112" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 100 L20 16 C20 10 24 6 30 6 L56 6 C72 6 80 16 80 32 C80 46 72 54 58 56 L82 100" stroke="#2E473B" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="58" cy="32" r="10" fill="#f4a855"/>
+                        </svg>
+                        <div class="brand-name">Rangeway</div>
+                    </div>
+                    <span class="brand-type">Operated by Altara Energy</span>
+                    <p class="brand-tagline">"Adventure in your EV, recharge in luxury."</p>
+                    <p class="brand-description">Hospitality-grade charging on America's most memorable routes. Climate-controlled lounges, premium amenities, and architecturally distinctive stations designed to complement their surroundings.</p>
+                    <p class="brand-focus"><strong>Focus:</strong> Premium destinations on scenic corridors.</p>
+                    <p class="brand-website"><a href="https://rangewayev.com">rangewayev.com</a></p>
                 </div>
             </div>
         </section>
@@ -467,11 +561,11 @@
             <div class="value-grid">
                 <div class="value-item">
                     <h4>Strategic Assets</h4>
-                    <p>Premium locations along scenic routes where traditional charging infrastructure cannot reliably serve travelers.</p>
+                    <p>We acquire and develop locations along high-traffic corridors and scenic routes where reliable charging infrastructure is needed most.</p>
                 </div>
                 <div class="value-item">
                     <h4>Operational Excellence</h4>
-                    <p>Purpose-built facilities with integrated infrastructure enabling best-in-class charging experiences.</p>
+                    <p>Every site is owned and operated by Altara Energy, our charging infrastructure company. One operator, consistent standards, reliable service.</p>
                 </div>
                 <div class="value-item">
                     <h4>Enduring Value</h4>
@@ -501,8 +595,9 @@
 
         <!-- Footer -->
         <footer class="footer">
-            <p>&copy; 2025 Redwood Mobility. All rights reserved. | <a href="https://redwoodmobility.com">redwoodmobility.com</a></p>
+            <p>&copy; <span id="year"></span> Redwood Mobility. All rights reserved. | <a href="https://redwoodmobility.com">redwoodmobility.com</a></p>
         </footer>
     </div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
