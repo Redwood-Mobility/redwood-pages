@@ -1332,7 +1332,8 @@ footer p {
     }
 
     .nav-links a:not(.nav-cta) {
-        display: none;
+        padding: 0.4rem 0.5rem;
+        font-size: 0.7rem;
     }
 
     .hero {
