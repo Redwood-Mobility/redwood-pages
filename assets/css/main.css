@@ -196,6 +196,11 @@ nav.scrolled {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
 .logo {
     width: 160px;
     height: auto;
@@ -205,6 +210,26 @@ nav.scrolled {
 .logo:hover {
     opacity: 0.8;
     transform: scale(0.98);
+}
+
+/* Logo SVG colors - Light mode */
+.logo-center-dot {
+    fill: #2E473B;
+}
+
+.logo-text-redwood {
+    fill: #2E473B;
+}
+
+/* Logo SVG colors - Dark mode */
+@media (prefers-color-scheme: dark) {
+    .logo-center-dot {
+        fill: #F3E5C8;
+    }
+
+    .logo-text-redwood {
+        fill: #F3E5C8;
+    }
 }
 
 .nav-links {
