@@ -170,11 +170,19 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== Navigation ===== */
 nav {
     position: fixed;
-    top: 1.25rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: auto;
-    max-width: calc(100% - 2rem);
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: transparent;
+    padding: 1.25rem 1rem;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    transition: padding 0.4s ease, background 0.4s ease;
+}
+
+.nav-inner {
     background: var(--nav-bg);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
@@ -183,24 +191,33 @@ nav {
     justify-content: space-between;
     align-items: center;
     gap: 3rem;
-    z-index: 1000;
     border: 1px solid var(--nav-border);
     border-radius: 100px;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    max-width: 900px;
+    width: auto;
+    transition: all 0.4s ease;
 }
 
 nav.scrolled {
-    top: 0;
-    left: 0;
-    transform: translateX(0);
-    width: 100%;
-    max-width: 100%;
-    border-radius: 0;
-    padding: 0.75rem 3rem;
+    padding: 0;
+    background: var(--nav-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-    border: none;
     border-bottom: 1px solid var(--nav-border);
+}
+
+nav.scrolled .nav-inner {
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    max-width: var(--container-max);
+    width: 100%;
+    padding: 0.75rem 3rem;
 }
 
 .logo-link {
@@ -1287,6 +1304,10 @@ footer p {
     }
 
     nav {
+        padding: 1rem 0.75rem;
+    }
+
+    .nav-inner {
         padding: 0.85rem 1.25rem;
         gap: 1.5rem;
     }
@@ -1308,7 +1329,7 @@ footer p {
         padding: 0.55rem 1rem;
     }
 
-    nav.scrolled {
+    nav.scrolled .nav-inner {
         padding: 0.7rem 1.5rem;
     }
 
@@ -1365,6 +1386,10 @@ footer p {
 /* ===== Responsive - Small Mobile ===== */
 @media (max-width: 480px) {
     nav {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .nav-inner {
         padding: 0.8rem 1rem;
         gap: 1rem;
     }
@@ -1387,7 +1412,7 @@ footer p {
         font-size: 0.7rem;
     }
 
-    nav.scrolled {
+    nav.scrolled .nav-inner {
         padding: 0.65rem 1rem;
     }
 
