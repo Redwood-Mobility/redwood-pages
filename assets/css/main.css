@@ -170,27 +170,34 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== Navigation ===== */
 nav {
     position: fixed;
-    top: 0;
-    width: 100%;
+    top: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    max-width: calc(100% - 2rem);
     background: var(--nav-bg);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
-    padding: 1rem 3rem;
+    padding: 0.65rem 1rem 0.65rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
     z-index: 1000;
-    border-bottom: 1px solid var(--nav-border);
+    border: 1px solid var(--nav-border);
+    border-radius: 100px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
     transition: all var(--transition-base);
 }
 
 nav.scrolled {
-    padding: 0.75rem 3rem;
-    background: var(--nav-bg);
+    top: 0.75rem;
+    padding: 0.5rem 0.85rem 0.5rem 1.25rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
 .logo {
-    width: 180px;
+    width: 140px;
     height: auto;
     transition: all var(--transition-fast);
 }
@@ -202,19 +209,8 @@ nav.scrolled {
 
 .nav-links {
     display: flex;
-    gap: 0.25rem;
+    gap: 0.15rem;
     align-items: center;
-    background: rgba(46, 71, 59, 0.08);
-    padding: 0.35rem;
-    border-radius: 100px;
-    border: 1px solid var(--nav-border);
-}
-
-@media (prefers-color-scheme: dark) {
-    .nav-links {
-        background: rgba(255, 255, 255, 0.08);
-        border-color: rgba(255, 255, 255, 0.1);
-    }
 }
 
 .nav-links a {
