@@ -178,11 +178,11 @@ nav {
     background: var(--nav-bg);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
-    padding: 0.65rem 1rem 0.65rem 1.5rem;
+    padding: 0.85rem 1.25rem 0.85rem 1.75rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    gap: 2.5rem;
     z-index: 1000;
     border: 1px solid var(--nav-border);
     border-radius: 100px;
@@ -192,12 +192,12 @@ nav {
 
 nav.scrolled {
     top: 0.75rem;
-    padding: 0.5rem 0.85rem 0.5rem 1.25rem;
+    padding: 0.65rem 1rem 0.65rem 1.5rem;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
 .logo {
-    width: 140px;
+    width: 160px;
     height: auto;
     transition: all var(--transition-fast);
 }
@@ -218,9 +218,9 @@ nav.scrolled {
     text-decoration: none;
     font-family: var(--font-display);
     font-weight: 500;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     letter-spacing: 0.02em;
-    padding: 0.5rem 1.1rem;
+    padding: 0.6rem 1.25rem;
     border-radius: 100px;
     position: relative;
     transition: all var(--transition-fast);
